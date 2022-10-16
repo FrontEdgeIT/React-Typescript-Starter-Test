@@ -8,11 +8,14 @@ export const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/dishes">Foods</Link>
+              <Link className={styles.a} to="/dishes">
+                Foods
+              </Link>
             </li>
-
             <li>
-              <Link to="/cars">Cars</Link>
+              <Link className={styles.a} to="/cars">
+                Cars
+              </Link>
             </li>
           </ul>
         </nav>

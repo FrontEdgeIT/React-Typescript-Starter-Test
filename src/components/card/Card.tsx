@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Card.module.css";
 
 interface CardProps {
-  children?: JSX.Element | JSX.Element[];
   id?: string;
   title?: string;
   url?: string;
@@ -11,10 +10,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ id, title, url, remove }) => {
   return (
-    <div
-      className={styles.wrapper}
-      style={{ backgroundImage: `url(${url})`, backgroundSize: "100%" }}
-    >
+    <div className={styles.wrapper} style={{ backgroundImage: `url(${url})` }}>
       <span>{title}</span>
 
       <div className={styles.controller}>

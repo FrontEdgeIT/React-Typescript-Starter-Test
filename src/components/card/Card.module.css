@@ -7,7 +7,14 @@
   align-items: center;
   border: 1px solid black;
   transition: 0.5s;
+  background-size: 100%;
 }
+
+.wrapper:hover {
+  scale: 1.2;
+  z-index: 2;
+}
+
 .wrapper > span {
   color: white;
   background-color: black;
@@ -16,10 +23,6 @@
   border-radius: 5px;
   position: absolute;
   top: 25px;
-}
-.wrapper:hover {
-  scale: 1.2;
-  z-index: 2;
 }
 
 .controller {
