@@ -1,0 +1,38 @@
+.wrapper {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: 0.5s;
+}
+.wrapper > span {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  position: absolute;
+  top: 25px;
+}
+.wrapper:hover {
+  scale: 1.2;
+  z-index: 2;
+}
+
+.controller {
+  height: auto;
+  width: auto;
+  position: absolute;
+  bottom: 15px;
+}
+.controller > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}

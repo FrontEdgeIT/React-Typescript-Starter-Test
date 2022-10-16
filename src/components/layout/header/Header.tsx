@@ -8,11 +8,11 @@ export const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/foods">Foods</Link>
+              <Link to="/dishes">Foods</Link>
             </li>
 
             <li>
-              <Link to="/users">Cars</Link>
+              <Link to="/cars">Cars</Link>
             </li>
           </ul>
         </nav>
