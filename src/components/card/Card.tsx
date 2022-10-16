@@ -8,6 +8,11 @@ interface CardProps {
   remove: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
+/**
+ * Card component to render the item.
+ * @param id - id of the data.
+ * @returns react component.
+ */
 export const Card: React.FC<CardProps> = ({ id, title, url, remove }) => {
   return (
     <div className={styles.wrapper} style={{ backgroundImage: `url(${url})` }}>
