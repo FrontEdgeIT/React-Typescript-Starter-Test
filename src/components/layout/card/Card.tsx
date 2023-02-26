@@ -27,11 +27,10 @@ export const Card: React.FC<Props> = ({ list }) => {
       })
       .catch((err) => console.log(err));
   };
-  // Delete the Item from the list 
+  // Delete the Item from the list
   const handleDelete = ({ e, setData, setLoading, list, setError }: DeleteItem) => {
     let id = e.currentTarget.id;
     let itemDeleted = deleteItem({ e, setData, setLoading, list, setError });
-    console.log(itemDeleted);
 
     itemDeleted.then(function (deleted) {
       if (deleted) {
