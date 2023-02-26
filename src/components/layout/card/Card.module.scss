@@ -47,6 +47,13 @@
       &.loading {
         opacity: 0.5;
       }
+      .error {
+        padding: 1em;
+        width: 100%;
+        background-color: rgba(63, 182, 63, .5);
+        border-radius: $radius;
+        margin-bottom: 1em;
+      }
       > li {
         display: flex;
         align-items: center;

@@ -5,6 +5,7 @@ import axios from "axios";
 const useFetch = <T extends GetList>({ setData, setLoading, list, setError }: T): void => {
   useEffect(() => {
     setLoading(true);
+    setData(null);
     setError("");
     axios
       .get(`http://localhost:3000/${list}`)

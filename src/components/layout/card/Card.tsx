@@ -31,6 +31,8 @@ export const Card: React.FC<Props> = ({ list }) => {
   const handleDelete = ({ e, setData, setLoading, list, setError }: DeleteItem) => {
     let id = e.currentTarget.id;
     let itemDeleted = deleteItem({ e, setData, setLoading, list, setError });
+    console.log(itemDeleted);
+    
     itemDeleted.then(function (deleted) {
       if (deleted) {
         // When it has been deleted successfully.
@@ -46,6 +48,7 @@ export const Card: React.FC<Props> = ({ list }) => {
       <div className={styles.head}>{list}</div>
       <div className={styles.body}>
         <ul className={loading ? styles.loading : ""}>
+          {error !== "" && <div className={styles.error}>{error}</div>}
           {data?.map((el) => {
             return (
               <Fragment key={el.id}>

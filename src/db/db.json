@@ -1,0 +1,24 @@
+{
+  "dishes": [
+    {
+      "id": 9,
+      "title": "Chicken",
+      "description": "Perfect and delicious chicken",
+      "url": "/assets/chicken.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Hamburger with fries",
+      "description": "Perfect and delicious hamburger with fries",
+      "url": "/assets/hamburger.jpg"
+    }
+  ],
+  "sports": [
+    {
+      "id": 10,
+      "title": "Athletics",
+      "description": "Athletics is a fine sport.",
+      "url": "/assets/athletics.jpg"
+    }
+  ]
+}
