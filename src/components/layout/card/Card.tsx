@@ -11,7 +11,7 @@ interface Props {
 export const Card: React.FC<Props> = ({ list }) => {
   let { data, setData, loading, setLoading, error, setError }: ContextValues<CardProps> = useContext(InfoContext);
   useFetch({ setData, setLoading, list, setError });
-
+  // Delete the item in the json file.
   const deleteItem = <T extends DeleteItem>({ e, setData, setLoading, list }: T): Promise<boolean | void> => {
     setLoading(true);
     let id = e.currentTarget.id;
@@ -27,12 +27,12 @@ export const Card: React.FC<Props> = ({ list }) => {
       })
       .catch((err) => console.log(err));
   };
-
+  // Delete the Item from the list 
   const handleDelete = ({ e, setData, setLoading, list, setError }: DeleteItem) => {
     let id = e.currentTarget.id;
     let itemDeleted = deleteItem({ e, setData, setLoading, list, setError });
     console.log(itemDeleted);
-    
+
     itemDeleted.then(function (deleted) {
       if (deleted) {
         // When it has been deleted successfully.
