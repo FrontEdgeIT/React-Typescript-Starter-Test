@@ -12,20 +12,19 @@ export const Card: React.FC<Props> = ({ list }) => {
   let { data, setData, loading, setLoading, error, setError }: ContextValues<CardProps> = useContext(InfoContext);
   useFetch({ setData, setLoading, list, setError });
   // Delete the item in the json file.
-  const deleteItem = <T extends DeleteItem>({ e, setData, setLoading, list }: T): Promise<boolean | void> => {
+  const deleteItem = <T extends DeleteItem>({ e, setData, setLoading, setError, list }: T): Promise<boolean | void> => {
     setLoading(true);
     let id = e.currentTarget.id;
     return fetch(`http://localhost:3000/${list}/${id}`, { method: "DELETE" })
       .then((result) => {
         setLoading(false);
         if (result.status === 200) {
-          // useFetch({ setData, setLoading, list, setError });
           return true;
         } else {
           return false;
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => setError("Something went wrong."));
   };
   // Delete the Item from the list
   const handleDelete = ({ e, setData, setLoading, list, setError }: DeleteItem) => {
