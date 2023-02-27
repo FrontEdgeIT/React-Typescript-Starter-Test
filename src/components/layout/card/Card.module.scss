@@ -1,0 +1,98 @@
+@import "../../../styles/variables";
+
+.card {
+  width: 100%;
+  height: calc(100vh - 100px);
+  border-radius: $radius;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+  // for small screens
+  @media only screen and (min-width: $sm) {
+    width: 30em;
+  }
+
+  // for medium screens
+  @media only screen and (min-width: $md) {
+    height: 40em;
+
+  }
+
+  .head {
+    width: 100%;
+    padding: 1em;
+    min-height: 50px;
+    background-color: $secondary-color;
+  }
+  .body {
+    padding: 1em;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $main-color;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: gray;
+      border-radius: $radius;
+    }
+    /* Firefox */
+    .selector {
+      scrollbar-width: thin;
+    }
+    > ul {
+      display: flex;
+      flex-direction: column;
+      &.loading {
+        opacity: 0.5;
+      }
+      .error {
+        padding: 1em;
+        width: 100%;
+        background-color: rgba(63, 182, 63, .5);
+        border-radius: $radius;
+        margin-bottom: 1em;
+      }
+      > li {
+        display: flex;
+        align-items: center;
+        height: 6em;
+        padding: 1em 0;
+        > div {
+          height: 5em;
+          width: 10em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin: 1em 1em 1em 0;
+          border-radius: $radius;
+        }
+        > article {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 100%;
+          width: 100%;
+        }
+        > button {
+          margin-left: auto;
+          border: none;
+          border-radius: $radius;
+          background-color: $link-color;
+          padding: 1em;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+          transition: transform ease 0.3s, box-shadow ease 0.3s;
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          }
+          &:active {
+            transform: translateY(0);
+            box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

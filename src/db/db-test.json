@@ -63,10 +63,40 @@
   ],
   "sports": [
     {
+      "id": 1,
+      "title": "Basketball",
+      "description": "Basketball is a fine sport.",
+      "url": "/assets/basketball.jpg"
+    },
+    {
       "id": 2,
       "title": "Football",
       "description": "Football is a fine sport.",
       "url": "/assets/football.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Golf",
+      "description": "Golf is a fine sport.",
+      "url": "/assets/golf.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Basketball",
+      "description": "Basketball is a fine sport.",
+      "url": "/assets/basketball.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Football",
+      "description": "Football is a fine sport.",
+      "url": "/assets/football.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Golf",
+      "description": "Golf is a fine sport.",
+      "url": "/assets/golf.jpg"
     },
     {
       "id": 7,

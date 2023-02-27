@@ -1,11 +1,12 @@
-import React from 'react'
+import { Card } from "../../../src/components/layout/card/Card";
+import styles from './DishScreen.module.css'
 
 interface Props {}
 
 export const DishScreen: React.FC<Props> = () => {
   return (
-    <div>
-      <h3>Hello from dishscreen</h3>
+    <div className={"container " + styles.page}>
+      <Card list='dishes' />
     </div>
-  )
-}
+  );
+};
